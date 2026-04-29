@@ -25,6 +25,8 @@ Stockwise unifies daily cashier operations with an AI-driven backend. It leverag
 
 ##  Project Architecture
 
+## 🧱 Project Architecture
+```text
 Stockwise2/
 ├── .streamlit/
 │   └── secrets.toml            # Secure database credentials (Git-ignored)
@@ -38,59 +40,69 @@ Stockwise2/
 │   └── sales_page.py           # POS checkout terminal
 ├── app.py                      # Main application router and state manager
 └── requirements.txt            # Dependency management
-
+```
 
 ## Installation
 
-▶️ Setup & Installation
+## ▶️ Setup & Installation
 You can run this system locally in under 5 minutes.
 
-1. Clone the repository:
+## ▶️ Setup & Installation
+You can run this system locally in under 5 minutes.
 
-git clone [https://github.com/](https://github.com/)[YourUsername]/Stockwise-ERP.git
-cd Stockwise-ERP
+**1. Clone the repository:**
+```bash
+git clone [https://github.com/ayushtamboli708-tech/smart-inventory-managemnet.git](https://github.com/ayushtamboli708-tech/smart-inventory-managemnet.git)
+cd smart-inventory-managemnet
+```
 
-2. Install dependencies:
-
+**2. Install dependencies:**
+```bash
 pip install -r requirements.txt
+```
 
-3. Configure Secure Cloud Credentials:
+**3. Configure Secure Cloud Credentials:**
 
-Create a .streamlit folder in the root directory, and inside it, create a secrets.toml file. Add your MySQL credentials:
-
-@ Ini, TOML
-
+```toml
 [mysql]
 host = "your-database-host.com"
-
 port = 4000
-
 database = "your_db_name"
-
 user = "your_username"
-
 password = "your_password"
+```
 
-4. Launch the application:
-
+**4. Launch the application:**
+```bash
 streamlit run app.py
-    
-## Screenshots
+```
+
+## 📸 Screenshots
+
+**1. Dashboard**
+![Dashboard View](images/Screenshot%202026-04-30%20001404.png)
+
+**2. Login Page**
+![Login Page View](images/Screenshot%202026-04-30%20001313.png)
+
+**3. Product Page**
+![Product Page View](images/Screenshot%202026-04-30%20005042.png)
+
+**4. Alert Page**
+![Alert Page View](images/Screenshot%202026-04-30%20001427.png)
 
 
+## Learnings & Engineering Challenges
 
-![App Screenshot](https://dummyimage.com/468x300?text=App+Screenshot+Here)
-
-![App Screenshot](https://dummyimage.com/468x300?text=App+Screenshot+Here)
-
-![App Screenshot](https://dummyimage.com/468x300?text=App+Screenshot+Here)
-## Key Learnings & Engineering Challenges
 1. Integrating Machine Learning with Web UIs: Running complex SARIMA forecasting models can freeze a web interface. I had to architect the forecasting_engine.py to efficiently process Pandas dataframes without bottlenecking the main Streamlit UI thread.
 
 2. Securing UI State Management: Implementing RBAC required strict session-state management. I engineered the app router to dynamically hide entire pages (like product_page.py) and disable critical buttons based on the login token, ensuring Staff could never bypass their permissions.
 
 3. Solving the "N+1 Database Problem": Initially, saving a multi-item purchase order took over 5 seconds due to sequential database pings. I rewrote the SQL logic to use cursor.executemany(), compressing the data into tuples and batch-inserting it in a single payload, dropping save times by 90%.
+
+
 ## Limitations & Future Improvements
+
 1. Automated PDF Invoicing: Currently, reporting relies on CSV exports. Future updates will include programmatic PDF generation for immediate Purchase Order emailing.
 
 2. Single-Tenant Architecture: The current database schema is designed for a single organization. To evolve this into a true SaaS product, a company_id column must be injected into all tables alongside a secure multi-tenant routing layer.
@@ -109,7 +121,3 @@ Ayush Tamboli * 🎓 Final Year Computer Science Student
 
 ***
 
-### Why this version is incredibly strong:
-1. **The Architecture Tree:** By listing your actual folders (`forecast/`, `ui/alert_page.py`), anyone reading the README can instantly see you know how to organize complex enterprise code.
-2. **The ML Integration:** It highlights the SARIMA model as a core feature, elevating you from a standard web developer to someone who understands predictive data analytics.
-3. **The RBAC (Role-Based Access Control):** Mentioning "Role-Based Access Control" is a massive keyword for enterprise software engineering jobs. It proves you understand application security and user scoping.
