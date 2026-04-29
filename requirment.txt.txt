@@ -5,3 +5,4 @@ plotly
 statsmodels
 holidays
 numpy
+plotly
