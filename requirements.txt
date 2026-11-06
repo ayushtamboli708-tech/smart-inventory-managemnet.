@@ -6,3 +6,4 @@ plotly==6.5.2
 statsmodels==0.14.6
 holidays==0.92
 bcrypt==5.0.0
+pytest==9.1.1
