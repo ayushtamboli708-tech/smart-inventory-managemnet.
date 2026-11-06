@@ -1,0 +1,29 @@
+# Secrets
+.streamlit/secrets.toml
+.env
+.env.*
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases and logs
+*.db
+*.sql.gz
+*.dump
+*.log
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Unrelated nested repository (GitHub Desktop tutorial)
+desktop-tutorial/

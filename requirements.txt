@@ -1,8 +1,8 @@
-streamlit
-pandas
-mysql-connector-python
-plotly
-statsmodels
-holidays
-numpy
-
+streamlit==1.54.0
+pandas==2.3.3
+numpy==2.4.2
+mysql-connector-python==9.6.0
+plotly==6.5.2
+statsmodels==0.14.6
+holidays==0.92
+bcrypt==5.0.0

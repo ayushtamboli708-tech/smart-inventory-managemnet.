@@ -1,0 +1,8 @@
+streamlit
+pandas
+mysql-connector-python
+plotly
+statsmodels
+holidays
+numpy
+bcrypt
