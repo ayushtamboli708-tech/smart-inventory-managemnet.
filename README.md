@@ -208,7 +208,7 @@ pagination, timezone bounds, MAPE/RMSE, and forecast/reorder logic. Most tests
 run without a database.
 
 ```powershell
-pip install -r requirements-dev.txt
+pip install -r requirements.txt
 python -m pytest -q
 ```
 
